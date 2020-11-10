@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Place the geocoder input outside the map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+        type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+</head>
+
+<body onload='realtimeClock()'>
+    <header>
+        <h1>TM</h1>
+        <p id='down'>maps</p>
+
+        <div id="clock"></div>
+
+    </header>
+    <div id="map"></div>
+    <div id="geocoder"></div>
+
+    <div class="container-info">
+        <h2 id='countryName'></h2>
+        <ul>
+            <li id="capital"></li>
+            <li id="population"></li>
+            <li id="area"></li>
+            <li>Info</li>
+            <li>Info</li>
+            <li id="place">Info</li>
+        </ul>
+        <div class="container-flag"><img id="myImage"></div>
+        <div class="container-weather">
+            <div id='wName'>            
+                <span id="wCity"></span><span id="wCountry"></span>
+            </div>
+            <ul>
+                <img id='pic'>
+                <p id="temp"></p> <br>
+                <p id="feels_like"></p>
+                
+            </ul>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./script.js"></script>
+    <script src="./script3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+
+</html>
