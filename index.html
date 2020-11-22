@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <title>TM maps</title>
+       <!--Leaflet js-->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <!-- Bootstrap CSS, JS AND JQUERY -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+        <!--CSS files-->
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/leaflet.css">
+
+</head>
+
+<body>
+
+    <body onload='realtimeClock()'>
+
+        <div class="d-flex bd-highlight">
+            <nav class="navbar navbar-light" style="background-color: white">
+                <div class="bd-highlight">
+                    <a class="navbar-brand">
+                        <h1>TM</h1>
+                    </a>
+                </div>
+                <div class="bd-highlight ui-widget">
+                    <form class="form-inline">
+                        <input class="form-control" id="autocomplete" type="search" placeholder="Search"
+                            aria-label="Search">
+                    </form>
+                </div>
+            </nav>
+            <div class="ml-auto pr-3 bd-highlight">
+                <div id="clock"></div>
+            </div>
+        </div>
+
+        <div class="container-fluid" id="map">
+
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+
+
+
+</html>
