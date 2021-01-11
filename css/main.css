@@ -3,31 +3,17 @@ body {
     margin: 0;
 }
 html, body, #map {
-    height: 96%;
     width: 100vw;
+    height: 100%;
 }
 
 #map {
     z-index: 0;
+    height: calc(100% - 82px);
 }
 
-#clock{
-    font-size: 1.5em;
-    font-weight: 600;
-    color: black;
-    margin-top: 22%;
-    transform: translateY(-50%);
-    padding-right: 10px;
 
-}
-
-@media screen and (max-width: 540px) {
-  #clock {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 342px) {
+@media screen and (max-width: 380px) {
   .navbar{
       justify-content: center;
   }
@@ -35,6 +21,200 @@ html, body, #map {
 
 #autocomplete {
     z-index: 100;
-    margin-bottom: 5px;
   }
+
+.modal-content::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    background-image: url(../images/sun2.gif); 
+    background-size: cover; 
+    opacity: 95%;
+}
+
+.table{
+    width: 100%;
+    color: white;
+}
+
+#forecast{
+    color: white;
+}
+
+p{
+    font-size: 0.7em;
+}
+
+#right{
+    text-align: right;
+}
+
+#left{
+    text-align: left;
+}
+
+.table td{
+    border: 0;
+}
+
+.lowHigh{
+    justify-content: center;
+}
+
+h1{
+    color: white;
+    font-size: 1em;
+}
+
+.description{
+    color: white;
+    font-size: 0.7em;
+}
+
+.temp{
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+#hi, #lo{
+    color: white;
+    font-size: 0.7em;
+}
+
+#hi{
+    padding-right: 5px;
+    color: white;
+}
+
+#lo{
+    padding-left: 5px;
+    color: white;
+}
+
+hr{
+    width: 100%;
+    text-align: center;
+    border: 0.5px solid white;
+
+}
+
+#info{
+    /*margin-top: 20px;*/
+    margin-bottom: 20px;
+}
+
+.navbar-brand h1{
+  color: black;
+}
+
+#cPhoto{
+    height: auto; 
+}
+
+.leaflet-popup-content{
+  width: 230px !important;
+  text-align: center;
+}
+
+
+
+#seeM{
+    margin: 5px 0;
+    text-align: right;
+}
+
+#nameP{
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+#history{
+    font-size: 0.8em;
+    font-weight:600;
+    padding-top: 15px;
+}
+
+#int{
+  text-align:justify;
+  word-break: break-all;
+  font-size: 0.9em;
+}
+
+#countryP{
+  font-weight: 600;
+  font-size: 1.4em;
+}
+  
+#detailsP{
+    text-align: left;
+    margin: -5px 0 -5px 0;
+    font-size: 0.8em;
+    
+}
+
+#weatherP{
+    font-size: 0.8em;
+}
+
+#wdetailsP{
+    text-align: left;
+    margin-left: -10px;
+} 
+
+#timeC{
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+#timeZ{
+  margin-left: 2px;
+}
+
+#wikiP{
+  margin-top: -10px;
+}
+
+.modal{
+    display: block;
+    height: 0;
+}
+
+.btn {
+  font-size: 0.7em;
+  font-weight: 700
+}
+
+h6{
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+a{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
+@media screen and (min-width: 420px) {
+  .slick-active{
+      width: 100px !important;
+  }
+  .modal-content{
+      width: 400px;
+  }
+}
+
+
+
+
+
+
+
+
+
+  
 
