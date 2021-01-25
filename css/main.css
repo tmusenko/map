@@ -2,26 +2,113 @@ body {
     padding: 0;
     margin: 0;
 }
-html, body, #map {
-    width: 100vw;
-    height: 100%;
-}
 
 #map {
     z-index: 0;
-    height: calc(100% - 82px);
+    height: 100%;
 }
 
+.modal-content{
+    border: none;
+}
 
-@media screen and (max-width: 380px) {
-  .navbar{
-      justify-content: center;
+#leftside, #rightside{
+    width: 100%;
+    height: 50vh;
+}
+
+#mapB{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #leftside{
+      font-size: 1em;
+      height:100vh;
+      display: none;
+     
+  }
+  #chooseCountry{
+      font-size: 1.2em !important;
+      margin-top: -12px;
+  }
+  .fa-3x{
+      font-size: 2em;
+  }
+  #title{
+      font-size: 2em;
+      margin-top: 3px;
+  }
+  #rightside{
+      height:100vh;
+  }
+  #mapB{
+      display: block;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      z-index: 600;
+      top: 0.3px;
+      font-size: 1.4em;
+  }
+  #infoB{
+    margin-left: 50%;
+    transform: translateX(-50%); 
+    width: 100px;
+    display: block;
+    font-size: 1.4em;
+  }
+  #cPhoto{
+      display: none;
   }
 }
 
-#autocomplete {
-    z-index: 100;
+@media screen and (max-width: 404px) {
+  #leftside{
+      font-size: 0.9em;
   }
+}
+
+@media screen and (max-width: 404px) {
+  #leftside{
+      font-size: 0.9em;
+  }
+  #countryP img{
+      width: 55px;
+      height: 55px;
+  }
+}
+
+@media screen and (max-width: 364px) {
+  #leftside{
+      font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #leftside{
+      font-size: 0.7em;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+  #leftside, #rightside{
+      height: 100vh;
+      display: block !important;
+  }
+  #leftside{
+      font-size: 0.8em;
+  }
+  #countryP img{
+      width: 55px;
+      height: 55px;
+  }
+  #infoB{
+      display: none;
+  }
+}
 
 .modal-content::before{
     position: absolute;
@@ -34,6 +121,7 @@ html, body, #map {
     background-size: cover; 
     opacity: 95%;
 }
+
 
 .table{
     width: 100%;
@@ -65,8 +153,8 @@ p{
 }
 
 h1{
-    color: white;
-    font-size: 1em;
+    color: black;
+    font-size: 2.5em;
 }
 
 .description{
@@ -95,74 +183,68 @@ h1{
     color: white;
 }
 
-hr{
-    width: 100%;
-    text-align: center;
-    border: 0.5px solid white;
-
-}
 
 #info{
-    /*margin-top: 20px;*/
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.navbar-brand h1{
-  color: black;
-}
+
 
 #cPhoto{
     height: auto; 
 }
 
 .leaflet-popup-content{
-  width: 230px !important;
   text-align: center;
+  margin-left: 20px;
 }
-
+.leaflet-popup-scrolled{
+    padding-left: 5px;
+}
 
 
 #seeM{
     margin: 5px 0;
     text-align: right;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 #nameP{
-    font-weight: 600;
-    font-size: 1.8em;
+    font-weight: 700;
+    font-size: 3em;
 }
 
 #history{
-    font-size: 0.8em;
+    font-size: 1.5em;
     font-weight:600;
     padding-top: 15px;
 }
 
 #int{
-  text-align:justify;
-  word-break: break-all;
-  font-size: 0.9em;
+  text-align:center;
+  font-size: 1.5em;
 }
 
 #countryP{
   font-weight: 600;
-  font-size: 1.4em;
+  font-size: 3em;
+  margin-bottom: -10px;
 }
   
 #detailsP{
     text-align: left;
-    margin: -5px 0 -5px 0;
-    font-size: 0.8em;
+    font-size: 2em;
     
 }
 
 #weatherP{
-    font-size: 0.8em;
+    font-size: 2em;
 }
 
 #wdetailsP{
     text-align: left;
-    margin-left: -10px;
 } 
 
 #timeC{
@@ -193,10 +275,47 @@ h6{
   font-weight: 600;
 }
 
-a{
-    font-size: 1.1em;
-    font-weight: 600;
+#readmore{
+    color: white;
+    font-size: 0.8em;
+   
 }
+
+
+
+.box{
+    height: 52px;
+    overflow: hidden;
+}
+
+.boxB{
+    height: 52px;
+    overflow: hidden;
+}
+
+#readmoreB{
+    margin-top: 10px;
+}
+
+#readmoreC{
+    margin-top: 10px;
+}
+
+.box.showContent, .boxB.showContent{
+    height: auto;
+}
+
+.showContent #readmoreB{
+    background-color: red !important;
+}
+
+.showContent #readmoreC{
+    background-color: red !important;
+}
+
+
+
+
 
 
 @media screen and (min-width: 420px) {
@@ -208,13 +327,153 @@ a{
   }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  }
 
 
 
+::-webkit-scrollbar-thumb {
+    
+    background: linear-gradient(45deg,#06dee1,#79ff6c);
+    border-radius: 3px;
+    
+}
+
+#absolute {
+    display: none;
+    position: absolute;
+    z-index: 500;
+    font-size: 1.5em;
+     background: white; 
+    top: 165px;
+    left: 40px;
+     border-radius: 10px; 
+     min-width: 300px; 
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 300ms ease-in-out;
+    margin-right: 40px;
+    
+}
+
+#titleH h2{
+  font-size: 1.6em;
+  padding-top: 2px;
+  font-weight: 600;
+}
 
 
+#exchange > div {
+    padding: 10px !important;
+  }
 
+  #exchangeRecieved, #toCurrencySymbol {
+    font-size: 1em !important;
+    font-weight: 600;
+  }
 
+  #exchangeBtn {
+    background-color: #F9DB6D;
+    color: rosybrown;
+    border: 1px solid #F9DB6D;
+  }
+
+  #exchange {
+    color: #30343F;
+    background: cadetblue;
+    border-radius: 10px;
+
+  }
+  
 
   
+  .exchangeInput {
+    text-align: center;
+    text-align-last: center;
+     border: 2px solid black;
+    border-radius: 10px;
+    background: rosybrown;
+    font-weight: 600;
+  }
+  
+  #convertBtn {
+    font-size: 1.2em;
+    font-weight: 600;
+    
+    background-color: #30343F;
+    color: rosybrown;
+    border: 0 solid transparent;
+    border-radius: 10px;
+  }
+  
+  #exchange > div > h4 {
+    font-size: 1em;
+    font-weight: 600;
+  }
+  
+  #exchangeRecieved, #toCurrencySymbol {
+    font-size: 1.5em;
+  }
+  
+  #exchange .row{
+    margin-left: 40px;
+    
+  }
+  
+  button.close{
+      padding: 10px;
+  }
+  
+#infoC {
+    z-index: 600;
+    font-size: 0.6em;
+    text-align: center;
+   
+}
+
+
+#chooseCountry {
+    text-align: center;
+    text-align-last: center;
+    border: 0px solid black;
+    border-radius: 10px;
+    font-size: 1.5em;
+    background: rosybrown;
+  }
+  
+#wikiP a{
+    color:rosybrown;
+}
+  
+#myModal h1{
+    font-size: 1em;
+}
+
+#pic{
+    margin-left: -2px;
+}
+
+body{
+    background: cadetblue;
+    background-size: cover;
+}
+
+.sun{
+    margin-left: -4px;
+}
+
+.city{
+    color: white;
+}
+
+.leaflet-popup-tip-container{
+    position: relative;
+}
+
+h3{
+    font-size: 1.7em;
+}
 
