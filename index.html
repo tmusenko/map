@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.css" />
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -46,19 +48,88 @@
 
 <body>
 
-    <nav class="navbar navbar-light" style="background-color: white">
-        <a class="navbar-brand">
-            <h1>GAZETTEER</h1>
-        </a>
-        <div class="bd-highlight ui-widget">
-            <form class="form-inline">
-                <input class="form-control mr-sm-5" id="autocomplete" type="search" placeholder="Search"
-                    aria-label="Search">
-            </form>
-        </div>
-    </nav>
+    <div class="row no-gutters">
 
-    <div class="container-fluid" id="map"></div>
+        <div class="col-md-5 no-gutters" id="leftside">
+            <nav class="navbar d-flex justify-content-center align-items-center">
+
+                <div class="col-6 col-md-12 d-flex justify-content-center">
+                    <i class="fas fa-globe fa-3x my-auto pr-2"></i>
+                    <h1 id="title">GAZETTEER</h1>
+                </div>
+
+                <div class="pt-2 d-flex justify-content-between">
+                    <select name="country" id="chooseCountry">
+                    </select>
+                </div>
+
+            </nav>
+
+
+
+
+            <div id="infoC" class="pl-3">
+
+            </div>
+            <button type="button" class="btn btn-secondary" id="infoB">Close</button>
+        </div>
+
+
+
+
+
+        <div class="col-md-7 no-gutters" id="rightside">
+            <div id="map">
+
+                <div id="absolute">
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <section id="exchange" class="tabContent">
+                        <div id="titleH">
+                            <h2><img src="./images/exchange.jpg" width="60" height="60">Exchange</h2>
+                        </div>
+                        <div class="row py-1">
+                            <h4 class="col-2 d-flex justify-content-end align-items-center">Amount:</h4>
+                            <input class="col-7 d-flex justify-content-center align-items-center exchangeInput"
+                                value="100" id="exchangeAmount">
+                        </div>
+                        <div class="row py-1">
+                            <h4 class="col-2 d-flex justify-content-end align-items-center">From:</h4>
+                            <select
+                                class="col-7 d-flex justify-content-center align-items-center exchangeInput currencyDropdown required"
+                                id="fromCurrency" name="myselect">
+                            </select>
+                        </div>
+                        <div class="row py-1">
+                            <h4 class="col-2 d-flex justify-content-end align-items-center">To:</h4>
+                            <select
+                                class="col-7 d-flex justify-content-center align-items-center exchangeInput currencyDropdown required"
+                                id="toCurrency" name="myselect">
+                            </select>
+                        </div>
+                        <div class="row py-1">
+                            <button class="col-5 d-flex justify-content-center align-items-center"
+                                id="convertBtn">Convert</button>
+                            <span class="col d-flex justify-content-center align-items-center">
+                                <span id="toCurrencySymbol"></span>
+                                <span id="exchangeRecieved"></span>
+                            </span>
+                        </div>
+                    </section>
+
+
+                </div>
+                <button type="button" class="btn btn-secondary btn-lg" id="mapB">Show the info</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" role="dialog">
@@ -106,13 +177,6 @@
 
                 </div>
 
-
-
-
-
-                <script src="./js/main.js"></script>
-                <script src="./slick/slick.min.js"></script>
-             
             </div>
 
         </div>
@@ -120,9 +184,8 @@
 
 
 
-
-
-
+    <script src="./js/main.js"></script>
+    <script src="./slick/slick.min.js"></script>
 </body>
 
 
