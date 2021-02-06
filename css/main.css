@@ -3,6 +3,24 @@ body {
     margin: 0;
 }
 
+#loader-wrapper {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*right: 0;*/
+  background: url(../images/loading.gif) center no-repeat #fff;
+  z-index: 9999;
+}
+
+.loader {
+  color: #EEF8FF;
+  -webkit-animation: loading 5s infinite;
+          animation: loading 5s infinite;
+}
+
 #map {
     z-index: 0;
     height: 100%;
@@ -24,9 +42,11 @@ body {
 @media screen and (max-width: 768px) {
   #leftside{
       font-size: 1em;
-      height:100vh;
-      display: none;
+      height: auto;
      
+  }
+  .topSmall{
+      display:none;
   }
   #chooseCountry{
       font-size: 1.2em !important;
@@ -133,7 +153,7 @@ body {
 }
 
 p{
-    font-size: 0.7em;
+    /*font-size: 0.7em;*/
 }
 
 #right{
@@ -159,18 +179,18 @@ h1{
 
 .description{
     color: white;
-    font-size: 0.7em;
+    /*font-size: 0.7em;*/
 }
 
 .temp{
     color: white;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 500;
 }
 
 #hi, #lo{
     color: white;
-    font-size: 0.7em;
+    /*font-size: 0.7em;*/
 }
 
 #hi{
@@ -229,7 +249,7 @@ h1{
 
 #countryP{
   font-weight: 600;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: -10px;
 }
   
@@ -286,11 +306,15 @@ h6{
 .box{
     height: 52px;
     overflow: hidden;
+    font-weight: 600;
+    font-size: 0.7em;
 }
 
 .boxB{
     height: 52px;
     overflow: hidden;
+     font-weight: 600;
+    font-size: 0.7em;
 }
 
 #readmoreB{
@@ -449,7 +473,7 @@ h6{
 }
   
 #myModal h1{
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 #pic{
