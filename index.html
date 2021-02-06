@@ -30,6 +30,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
@@ -47,9 +48,14 @@
 </head>
 
 <body>
+    
 
-    <div class="row no-gutters">
+    <div id="loader-wrapper" class="d-flex align-items-center justify-content-center">
+            <div class="loader"></div>
+        </div>
 
+   <div class="row no-gutters">
+        
         <div class="col-md-5 no-gutters" id="leftside">
             <nav class="navbar d-flex justify-content-center align-items-center">
 
@@ -66,13 +72,18 @@
             </nav>
 
 
-
+            <div class="topSmall">
 
             <div id="infoC" class="pl-3">
 
             </div>
             <button type="button" class="btn btn-secondary" id="infoB">Close</button>
+            
+            </div>
         </div>
+        
+      
+  
 
 
 
@@ -121,6 +132,7 @@
 
                 </div>
                 <button type="button" class="btn btn-secondary btn-lg" id="mapB">Show the info</button>
+           
             </div>
 
 
