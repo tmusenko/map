@@ -35,6 +35,42 @@ body {
     height: 50vh;
 }
 
+#leftside{
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  }
+
+
+
+::-webkit-scrollbar-thumb {
+    
+    background: linear-gradient(45deg,#06dee1,#79ff6c);
+    border-radius: 3px;
+    
+}
+
+.news{
+    width: 95%;
+    
+}
+
+#newsT{
+    font-weight: 800;
+    margin-top: -20px;
+}
+
+#title1, #title2, #title3{
+    font-weight: 800;
+    
+}
+
+#description1,#description2,#description3{
+    margin-top: 10px;
+}
+
 #mapB{
     display: none;
 }
