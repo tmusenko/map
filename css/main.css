@@ -189,7 +189,7 @@ body {
 }
 
 p{
-    /*font-size: 0.7em;*/
+    font-size: 1.1em;
 }
 
 #right{
@@ -210,7 +210,7 @@ p{
 
 h1{
     color: black;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 .description{
@@ -291,12 +291,13 @@ h1{
   
 #detailsP{
     text-align: left;
-    font-size: 2em;
+    font-size: 2.5em;
     
 }
 
 #weatherP{
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: 600;
 }
 
 #wdetailsP{
@@ -306,15 +307,37 @@ h1{
 #timeC{
   margin-top: 5px;
   margin-left: 2px;
+  margin-right: 7px;
 }
 
 #timeZ{
   margin-left: 2px;
+  margin-right: 7px;
 }
 
 #wikiP{
   margin-top: -10px;
+  font-size: 1.2em;
+  font-weight: 600;
 }
+
+
+#time{
+    font-weight: 700;
+}
+
+#timeZone{
+    font-weight: 700;
+}
+
+#sunset{
+    font-weight: 700;
+}
+
+#sunrise{
+    font-weight: 700;
+}
+
 
 .modal{
     display: block;
@@ -514,6 +537,7 @@ h6{
 
 #pic{
     margin-left: -2px;
+    margin-right: 5px;
 }
 
 body{
